@@ -16,6 +16,8 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
+  run_constrains:
+    - 7za <0.0.0a
 
 test:
   commands:
