@@ -7,9 +7,3 @@ copy UI\Console\x64\7z.exe %LIBRARY_PREFIX%\bin\7z.exe
 
 for /d %%G in (dir Bundles\Format*) do copy %%G\x64\*.dll %LIBRARY_PREFIX%\bin\
 for /d %%G in (dir Bundles\Format*) do copy %%G\x64\*.lib %LIBRARY_PREFIX%\lib\
-
-echo Source
-attrib /s /d
-
-echo Installation
-attrib /s /d %LIBRARY_PREFIX%
