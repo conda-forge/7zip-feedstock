@@ -1,5 +1,5 @@
 {% set name = "7zip" %}
-{% set version = "23.01" %}
+{% set version = "24.08" %}
 
 package:
   name: {{ name }}
@@ -10,7 +10,7 @@ source:
   sha256: fc459c2314a032231c157fd3257906c070ceed11efd6ffa621c2dfebbbc31281
 
 build:
-  number: 2
+  number: 0
   skip: true  # [not win]
 
 requirements:
