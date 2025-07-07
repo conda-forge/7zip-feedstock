@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/7zip-feedstock/
 
 Home: https://www.7-zip.org/
 
-Package license: LGPL-2.1-or-later AND LGPL-2.1-or-later WITH unRAR-restriction
+Package license: LGPL-2.1-or-later AND LicenseRef-LGPL-2.1-or-later-with-unRAR-restriction
 
 Summary: 7-Zip is a file archiver with a high compression ratio.
 
