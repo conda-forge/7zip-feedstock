@@ -9,7 +9,7 @@ Package license: LGPL-2.1-or-later AND LicenseRef-LGPL-2.1-or-later-with-unRAR-r
 
 Summary: 7-Zip is a file archiver with a high compression ratio.
 
-Development: https://sourceforge.net/p/sevenzip/
+Development: https://github.com/ip7z/7zip
 
 Current build status
 ====================
