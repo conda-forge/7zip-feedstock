@@ -28,6 +28,7 @@ tests:
       - 7z.exe
       - 7za.exe
       - 7zr.exe
+      - 7zz.exe
 
 about:
   license: LGPL-2.1-or-later AND LicenseRef-LGPL-2.1-or-later-with-unRAR-restriction
