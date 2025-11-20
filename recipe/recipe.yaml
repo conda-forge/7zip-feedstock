@@ -21,14 +21,14 @@ requirements:
     - ${{ compiler('cxx') }}
     - ${{ stdlib('c') }}
   run_constraints:
-    - 7za <0.0.0a
+    - 7za ==999999999
 
 tests:
   - script:
-      - 7z.exe
-      - 7za.exe
-      - 7zr.exe
-      - 7zz.exe
+    - 7z
+    - 7za
+    - 7zr
+    - 7zz
 
 about:
   license: LGPL-2.1-or-later AND LicenseRef-LGPL-2.1-or-later-with-unRAR-restriction
