@@ -2,18 +2,18 @@ schema_version: 1
 
 context:
   name: 7zip
-  version: 24.08
+  version: 25.01
 
 package:
   name: ${{ name }}
   version: ${{ version }}
 
 source:
-  url: https://7-zip.org/a/7z${{ version | replace('.', '') }}-src.7z
-  sha256: 4df7a62e5ce503892f500b1f96f0a954931c5266900c439102040957b25a90c6
+  url: https://github.com/ip7z/7zip/archive/${{ version }}.tar.gz
+  sha256: 8772e4ef86540c98bf4c23a6d9e13b3a25794d4bb30986ef0b1b9f20075b34c9
 
 build:
-  number: 2
+  number: 0
   skip: not win
 
 requirements:
