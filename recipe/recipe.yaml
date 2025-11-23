@@ -19,6 +19,9 @@ requirements:
   build:
     - ${{ compiler('cxx') }}
     - ${{ stdlib('c') }}
+    - if: not win
+      then:
+        - make
   run_constraints:
     - 7za ==999999999
 
