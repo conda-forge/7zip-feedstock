@@ -14,12 +14,14 @@ source:
 
 build:
   number: 0
-  skip: not win
 
 requirements:
   build:
     - ${{ compiler('cxx') }}
     - ${{ stdlib('c') }}
+    - if: not win
+      then:
+        - make
   run_constraints:
     - 7za ==999999999
 
