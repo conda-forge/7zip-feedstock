@@ -22,6 +22,9 @@ requirements:
     - if: not win
       then:
         - make
+    - if: osx
+      then:
+        - uutils-coreutils
   run_constraints:
     - 7za ==999999999
 
