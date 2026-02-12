@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: 7zip
-  version: 25.01
+  version: "26.00"
 
 package:
   name: ${{ name }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://github.com/ip7z/7zip/archive/${{ version }}.tar.gz
-  sha256: 8772e4ef86540c98bf4c23a6d9e13b3a25794d4bb30986ef0b1b9f20075b34c9
+  sha256: 07eafed75d661282d402dc2a3edf17e1dbb36fb813f4fbf5a2bad4f6b722aed5
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -30,10 +30,10 @@ requirements:
 
 tests:
   - script:
-    - 7z
-    - 7za
-    - 7zr
-    - 7zz
+      - 7z
+      - 7za
+      - 7zr
+      - 7zz
 
 about:
   license: LGPL-2.1-or-later AND LicenseRef-LGPL-2.1-or-later-with-unRAR-restriction
