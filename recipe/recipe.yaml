@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: 7zip
-  version: "26.00"
+  version: "26.01"
 
 package:
   name: ${{ name }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/ip7z/7zip/archive/${{ version }}.tar.gz
-  sha256: 07eafed75d661282d402dc2a3edf17e1dbb36fb813f4fbf5a2bad4f6b722aed5
+  sha256: f4212b508641b3584f7089ab67bc0aba028c631f049b4dd603ff07853e72e749
 
 build:
   number: 0
