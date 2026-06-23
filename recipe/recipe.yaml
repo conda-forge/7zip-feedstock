@@ -13,7 +13,7 @@ source:
   sha256: f4212b508641b3584f7089ab67bc0aba028c631f049b4dd603ff07853e72e749
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -34,6 +34,24 @@ tests:
       - 7za
       - 7zr
       - 7zz
+  # Regression test: each binary must actually be able to create and verify an
+  # archive. Running the binaries with no arguments only prints the usage banner
+  # and never exercises codec loading, so the bare check above passes even when
+  # real archiving is broken (e.g. the console `7z` failing with
+  # "Codec Load Error: ./7z.so" -> E_NOTIMPL because the codec plugin is missing
+  # or cannot be located).
+  - script:
+      - if: unix
+        then: echo "conda-forge 7zip roundtrip" > sample.txt
+        else: echo conda-forge 7zip roundtrip> sample.txt
+      - 7z a archive_7z.7z sample.txt
+      - 7z t archive_7z.7z
+      - 7za a archive_7za.7z sample.txt
+      - 7za t archive_7za.7z
+      - 7zr a archive_7zr.7z sample.txt
+      - 7zr t archive_7zr.7z
+      - 7zz a archive_7zz.7z sample.txt
+      - 7zz t archive_7zz.7z
 
 about:
   license: LGPL-2.1-or-later AND LicenseRef-LGPL-2.1-or-later-with-unRAR-restriction
