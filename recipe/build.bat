@@ -1,5 +1,3 @@
-set enabledelayedexpansion
-
 cd CPP\7zip
 if %target_platform%==win-64 set PLATFORM=x64
 if %target_platform%==win-arm64 set PLATFORM=arm64
@@ -21,7 +19,7 @@ REM console 7z fails with "Codec Load Error -> E_NOTIMPL".
 copy Bundles\Format7zF\%PLATFORM%\7z.dll "%PREFIX%\bin" /Y
 
 for /d %%G in (Bundles\Format*) do (
-    echo Copying from %%G\!PLATFORM!
-    copy "%%G\!PLATFORM!\*.dll" "%LIBRARY_BIN%" /Y
-    copy "%%G\!PLATFORM!\*.lib" "%LIBRARY_LIB%" /Y
+    echo Copying from %%G\%PLATFORM%
+    copy "%%G\%PLATFORM%\*.dll" "%LIBRARY_BIN%" /Y
+    copy "%%G\%PLATFORM%\*.lib" "%LIBRARY_LIB%" /Y
 )
